@@ -1,10 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Head</title>
+    <!-- css 파일을 로드 -->
+<!--    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <style>
+        /* 문서의 스타일을 정의 */
+        /*
+        h1 {
+            background-color: red;
+            font-size: 40px;
+            line-height: 60px;
+        }
+        */
+    </style>
 </head>
 <body>
+    <h1>뭘보 냐옹 -_^</h1>
+    <img src="/assets/img/cute.jpeg" width="300" height="300" alt="귀여운애"> <!-- 이미지 못불러왔을 때 alt의 텍스트가 노출 -->
 
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>설명</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>고 양이</td>
+                <td>뚱냥이?</td>
+                <td>&nbsp;</td> <!-- 띄어스기는 공백으로 인식 못해서 공백 처리 -->
+            </tr>
+            <tr>
+                <td colspan="3">컬럼 합치기</td> <!-- td가 두 칸으로 인식 -->
+                <!-- <td>&nbsp;</td> -->
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>설명</th>
+            <th>비고</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">고 양이</td> <!-- 위아래 통합이므로 colspan을 지워야함 -->
+            <td>뚱냥이?</td>
+            <td>&nbsp;</td> <!-- 띄어스기는 공백으로 인식 못해서 공백 처리 -->
+        </tr>
+        <tr>
+            <td colspan="2">컬럼 합치기</td> <!-- td가 두 칸으로 인식 -->
+            <!-- <td>&nbsp;</td> -->
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
