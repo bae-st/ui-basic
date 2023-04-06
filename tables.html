@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Head</title>
+    <!-- css 파일을 로드 -->
+<!--    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <style>
+        /* 문서의 스타일을 정의 */
+        /*
+        h1 {
+            background-color: red;
+            font-size: 40px;
+            line-height: 60px;
+        }
+        */
+    </style>
+</head>
+<body>
+
+<!--    <h1>뭘보 냐옹 -_^</h1>-->
+<!--    <img src="/assets/img/cute.jpeg" width="300" height="300" alt="귀여운애"> &lt;!&ndash; 이미지 못불러왔을 때 alt의 텍스트가 노출 &ndash;&gt;-->
+
+<!--    <table border="1">-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>이름</th>-->
+<!--                <th>설명</th>-->
+<!--                <th>비고</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            <tr>-->
+<!--                <td>고 양이</td>-->
+<!--                <td>뚱냥이?</td>-->
+<!--                <td>&nbsp;</td> &lt;!&ndash; 띄어스기는 공백으로 인식 못해서 공백 처리 &ndash;&gt;-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td colspan="3">컬럼 합치기</td> &lt;!&ndash; td가 두 칸으로 인식 &ndash;&gt;-->
+<!--                &lt;!&ndash; <td>&nbsp;</td> &ndash;&gt;-->
+<!--            </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+
+
+<!--    <table border="1">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>이름</th>-->
+<!--            <th>설명</th>-->
+<!--            <th>비고</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--            <td rowspan="2">고 양이</td> &lt;!&ndash; 위아래 통합이므로 colspan을 지워야함 &ndash;&gt;-->
+<!--            <td>뚱냥이?</td>-->
+<!--            <td>&nbsp;</td> &lt;!&ndash; 띄어스기는 공백으로 인식 못해서 공백 처리 &ndash;&gt;-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td colspan="2">컬럼 합치기</td> &lt;!&ndash; td가 두 칸으로 인식 &ndash;&gt;-->
+<!--            &lt;!&ndash; <td>&nbsp;</td> &ndash;&gt;-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+
+    <table border="1" width="800">
+        <caption>표 제목</caption>
+        <colgroup>
+            <col  width="60"/>
+            <col width="80"/>
+            <col width="160"/>
+            <col width="auto"/>
+            <col width="auto"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th rowspan="2">구분</th>
+            <th colspan="2">제목</th>
+            <th colspan="2">설명</th>
+        </tr>
+        <tr>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        <tr>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th rowspan="4">A</th>
+<!--            <td><b>A</b></td>-->
+            <td>제목</td>
+            <td>소제목</td>
+            <td>설명</td>
+            <td>비고</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        </tr>
+        <tr>
+            <td colspan="3">5</td>
+            <td rowspan="2">6</td>
+<!--            <td>7</td>-->
+<!--            <td>8</td>-->
+        </tr>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+<!--            <td>12</td>-->
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">footer</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
