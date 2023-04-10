@@ -1,84 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>Lists</title>
-    </head>
-    <body>
-        <form action="login">
-            <fieldset>
-                <legend>필수정보 입력</legend>
-                <div>
-                    <label for="login-id">아이디</label>
-        <!--                <input id="login-id" type="text" name="login_id" placeholder="id를 입력해주세요." disabled style="border-radius: 5px; border-color: cadetblue"/><br>-->
-        <!--                <input id="login-id" type="text" name="login_id" placeholder="id를 입력해주세요." readonly style="border-radius: 5px; border-color: cadetblue"/><br>-->
-                    <input id="login-id" type="text" name="login_id" placeholder="id를 입력해주세요." required style="border-radius: 5px; border-color: cadetblue"/><br>
-                </div>
-                <div>
-                    <label for="login-pw">비밀번호</label>
-                    <input id="login-pw" type="password" name="login_pw" placeholder="pw를 입력해주세요." required style="border-radius: 5px"/><br>
-                </div>
-                <div>
-                    <input id="login-auto" type="checkbox" name="login_auto" value="1" checked /> <!-- value는 true/false의 의미  -->
-                    <span>자동 로그인</span>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>선택정보 입력</legend>
-                <input type="range" min="0" />
-                <input type="number" min="0" max="20" value="10" step="2"/> <!-- step을 쓰면 해당 숫자만큼 증가함 -->
-                <input type="tel" /> <!-- 모바일에서 키패드가 바뀜 -->
-                <div>
-                    <button type="submit" id="submit" href="https://create-something-from-nothing.tistory.com">로그인</button>
-                </div>
-                <div>
-                    <label>좋아하는 과일</label>
-                    <div>
-                        <div>
-                            <input id="selection-1" type="radio" name="selection" value="apple" checked /> <!-- name을 맞춰줘야 하나씩만 체크됨 -->
-                            <label for="selection-1">사과</label>
-                        </div>
-                        <div>
-                            <input id="selection-2" type="radio" name="selection" value="orange" /> <!-- value는 서버에 전달되는 데이터 -->
-                            <label for="selection-2">오렌지</label>
-                        </div>
-                        <div>
-                            <input id="selection-3" type="radio" name="selection" value="strawberry" />
-                            <label for="selection-3">딸기</label>
-                        </div>
-                        <div>
-                            <input id="selection-4" type="radio" name="selection" value="mango" />
-                            <label for="selection-4">망고</label>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <label for="content">내용</label>
-                    <textarea id="content" rows="4" placeholder="내용을 입력해주세요.">// 처음부터 default 내용을 써둘 때</textarea>
-                </div>
-                <div>
-                    <select>
-        <!--                    <option disabled>선택해주세요.</option>-->
-                        <option value="0">사과</option>
-                        <option value="1" selected>오렌지</option> <!-- 처음부터 선택: selected -->
-                        <option value="2" disabled>딸기</option>
-                        <option value="3">망고</option>
-                    </select>
-                </div>
-                <div>
-                    <span>좋아하는 컬러</span>
-                    <input type="color">
-                </div>
-                <div>
-                    <span>생일</span>
-                    <input type="date">
-                </div>
-                <div>
-                    <label for="upload-file">파일 선택</label>
-                    <input id="upload-file" type="file" placeholder="파일을 선택해주세요." accept="image/jpeg"> <!-- 선택한 이미지 형식만 accept="image/jpeg" -->
-        <!--                <input id="upload-file" type="file" placeholder="파일을 선택해주세요." accept="image/*" multiple> &lt;!&ndash; multiple&ndash;&gt;-->
-                </div>
-            </fieldset>
-        </form>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS</title>
+    <style>
+        /* CSS */
+        h1 {
+            padding: 10px 20px;
+            background-color: black;
+            border-radius: 25px;
+            color: white;
+        }
+        p {
+            color: cornflowerblue;
+        }
+        p.red {
+            color: red;
+        }
+
+        p#orange {
+            background-color: orange;
+            color: white;
+        }
+
+        p#gray.red {
+            color: gray; /*!important*/
+        }
+        p#gray.forestgreen {
+            color: forestgreen;
+        }
+        p#gray.red.forestgreen {
+            color: rebeccapurple;
+        }
+        /** {*/
+        /*    margin: 0*/
+        /*    padding: 0;;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <h1>Cascading Style Sheet</h1>
+    <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+    <p class="red">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)</p>
+    <p id="orange">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+    <p id="gray" class="red forestgreen">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</body>
 </html>
