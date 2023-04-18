@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    padding: 20px;
+    background-color: darkorange;
+    color: white;
+
+    outline-width: 1px;
+    outline-color: blue;
+    outline-style: solid;
+    outline-offset: 5px;
+
+    text-align: center;
+    text-align: left;
+    /*text-align: right;*/
+
+    /*text-align-last: left;*/
+
+    /*direction: ltr;*/
+    /*direction: rtl;*/
+
+    vertical-align: middle;
+
+    text-decoration-line: underline;
+    text-decoration-line: line-through;
+    text-decoration-line: overline; /* 글자 위에 선 그어짐 */
+    /*text-decoration-line: blink;*/
+
+    text-decoration-thickness: 2px;
+    text-decoration: underline 2px grey; /* 축약형 */
+    text-transform: uppercase; /* 대문자 */
+    text-transform: lowercase; /* 소문자 */
+    text-transform: capitalize; /* 단어 첫글자만 대문자 */
+
+    font-size: 20px;
+    line-height: 30px;
+    text-indent: 10px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    white-space: nowrap;
+
+    text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+input {
+    margin: 50px;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid seagreen;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus-visible {
+    /*outline-width: 1px;*/
+    /*outline-color: green;*/
+    /*outline-style: solid;*/
+    /*outline-offset: 5px;*/
+    border: 1px solid forestgreen;
+    outline: none;
+    /*outline: 1px solid blue;*/
+    box-shadow: 0 1px 8px rgba(0, 0, 255, 0.4);
+}
+
+.box-2 {
+    width: 500px;
+    margin: 50px;
+    background-color: grey;
+}
+
+.box-2 img {
+    /*display: inline;*/
+    display: block; /* display: block === vertical-align 대신 사용 가능 */
+    width: 100%;
+    height: auto;
+    /*vertical-align: top; !* img에 수직 정렬 관련해서 넣어줘야함, inline 처리되어야 하는 것들 *!*/
+
+}
+
+/* 말줄임 */
+.box-3 {
+    overflow: hidden;
+    width: 300px;
+    margin: 40px;
+    padding: 20px;
+    height: 150px;
+    background-color: cornflowerblue;
+    color: grey;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* 5줄 넘으면 말 줄임 */
+.box-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    width: 300px;
+    max-height: 150px;
+    margin: 50px;
+    /*padding: 20px;*/
+    background-color: cornflowerblue;
+    color: grey;
+    font-size: 20px;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* 몇번째 줄부터 말줄임표? */
+}
