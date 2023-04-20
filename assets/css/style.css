@@ -1,44 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;600&family=Noto+Serif+KR:wght@300;400;600&family=Sofia+Sans:ital,wght@0,100;1,100&display=swap');
 @import url("https://use.typekit.net/zzj4qmz.css");
+
 * {
 
     margin: 0;
     padding: 0;
 }
 
-.box {
-    width: 300px;
-    margin: 20px;
-    font-size: 16px;
-    font-weight: 700; /* bold */
-    line-height: 24px;
-    /*font-weight: normal; !* 보통 *!*/
-    /*font-weight: bold;*/
-    /*font-weight: lighter;*/
-    /*font-weight: 500; !* semi bold *!*/
-    /*font-weight: 400; !* regular *!*/
-    /*font-weight: 300; !* light *!*/
-    /*font-weight: 200; !* ultra light *!*/
-    /*font-weight: 100; !* thin *!*/
-
-    /*font-style: oblique;*/
-    /*font-style: normal;*/
-
-    /*font-family: 'Noto Sans KR', 'Roboto', 'Noto Sans', -apple-system, 'Helvetica Neue', 'Arial', sans-serif;*/
-    /*font-family: 'SF Pro KR', 'SF Pro Display', 'SF Pro Icons', 'Apple Gothic', 'HY Gulim', 'MalgunGothic', 'HY Dotum', 'Lexi Gulim', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif*/
-}
-
-.box-1 {
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /*overflow: hidden;*/
     font-family: 'Noto Serif KR','Sofia Sans', serif;
+    font-family: futura-pt, sans-serif;
+    padding-top: 46px;
 }
 
-/*.box-2 {*/
-/*    font-family: 'Dosis', 'Josefin Sans', sans-serif;*/
-/*}*/
+/* element:state */
+/* element:link - status */
+a, a:link, a:visited {
+    display: inline-block; /* a 태그의 공백까지 인식함 */
+    color: orange;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+a {
+    display: inline-block;
+    vertical-align: top;
+    transition: all 400ms ease-in-out;
+}
+
+a:hover {
+    color: green;
+    /*transition: all 400ms ease-in-out;*/
+}
+
+.box {
+    margin: 30px;
+    padding: 30px;
+}
+
+.box a {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: greenyellow;
+    border-radius: 6px;
+}
+
+.box a.link_blog {
+    visibility: hidden;
+}
+
+.box a:hover {
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 20px;
+    color: green;
+}
+
+/* :active - a 요소를 클릭할 때의 상태 */
+.box a:active {
+    padding-right: 60px;
+    padding-left: 60px;
+    border-radius: 999px;
+    font-size: 20px;
+    line-height: 26px;
+    background-color: forestgreen;
+}
+
+.box:hover a {
+    display: none;
+}
+
+.box:hover a.link_blog {
+    display: inline-block;
+    visibility: visible;
+}
+
+.menu_container {
+    position: relative;
+    z-index: 1;
+}
+
+ul.menu {
+    /*position: static;*/
+    /*position: relative;*/
+    position: fixed; /* header가 이런식으로 구성. 브라우저상에서 공중에 띄움, fixed 일 때 보통 width 100% 사용 */
+    /*top: 100px;*/
+    /*right: 100px;*/
+    /*left: 100px;*/
+    /*bottom: 100px;*/
+    /*margin-top: 30px;*/
+    /*list-style-type: none;*/
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.15);
+}
+
+ul.menu li {
+    display: inline-block;
+    /*margin: 10px;*/
+    vertical-align: top;
+}
+
+ul.menu li a {
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 18px;
+    /*font-weight: 600px;*/
+}
+
+ul.menu li a:hover {
+    color: mediumspringgreen;
+}
 
 .box-2 {
-    /*font-family: futura-pt, sans-serif;*/
-    font-family: essonnes-text, serif;
-    font-weight: 400;
-    font-style: italic;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    color: white;
+    font-size: 80px;
+    line-height: 100px;
 }

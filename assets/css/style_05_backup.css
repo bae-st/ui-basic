@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;600&family=Noto+Serif+KR:wght@300;400;600&family=Sofia+Sans:ital,wght@0,100;1,100&display=swap');
+@import url("https://use.typekit.net/zzj4qmz.css");
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Serif KR','Sofia Sans', serif;
+    font-family: futura-pt, sans-serif;
+}
+
+/* element:state */
+/* element:link - status */
+a, a:link, a:visited {
+    display: inline-block; /* a 태그의 공백까지 인식함 */
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: 20px;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    /*vertical-align: top;*/
+    vertical-align: middle;
+    background-color: greenyellow;
+    border-radius: 6px;
+    transition: all 600ms ease-in-out;
+}
+
+/* :visited 브라우저에 링크 방문 내역이 있는 상태 */
+a:visited {
+    color: orange;
+}
+
+a:hover {
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 20px;
+    color: green;
+    /*transition: all 400ms ease-in-out;*/
+}
+
+/* :active - a 요소를 클릭할 때의 상태 */
+a:active {
+    padding-right: 60px;
+    padding-left: 60px;
+    border-radius: 999px;
+    font-size: 20px;
+    line-height: 26px;
+    background-color: forestgreen;
+}
+
+a.link_blog {
+    visibility: hidden;
+}
+
+.box {
+    margin: 30px;
+    padding: 30px;
+}
+
+.box:hover a {
+    display: none;
+}
+
+.box:hover a.link_blog {
+    display: inline-block;
+    visibility: visible;
+}
