@@ -3,84 +3,112 @@
     padding: 0;
 }
 
-.clear {
-    clear:both;
-    width: 0;
-    height: 0;
+.contents {
+    width: 100vw;
+    height: 100vh;
 }
 
-img {
-    display: inline-block;
-    vertical-align: top;
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: yellowgreen;
+    text-align: center;
+    font-size: 80px;
+    color: pink;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 300px;
+
+    /*transform: perspective(1000px);*/
+    /* transform */
+    transform: translateX(50px) translateY(100px) translateZ(100px);
+
+    transition: transform 300ms ease-in-out;
 }
 
-header#header {}
-
-/* 띄어쓰기: 하위항목 */
-#header .content-area {
-    width: 1130px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px;
+.box.box-1 {
+    transform: scale(1.0) rotate(0deg);
 }
 
-#header .special {
-    border-bottom: 1px solid #e4e8eb;
+.box-wrap {
+    width: 300px;
+    height: 300px;
 }
 
-#header .group {
-    box-shadow: 0 1px 3px rgb(0, 0, 0, 0.12);
+.box-wrap:hover .box.box-1 {
+    transform: scale(0.3) rotate(45deg);
+    /*transform-origin: 100% 0;*/
 }
 
-#header nav.navigation {
-    float: left;
+.close {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    margin-top: 200px;
+    background-color: #10ce72;
 }
 
-#header .weather {
-    float: right;
-}
-
-#header .group .content-area::after {
-    content: '';
+.close span {
     display: block;
-    clear:both;
-    width: 0;
-    height: 0;
+    position: absolute;
+    background-color: black;
 }
 
-#contents {
-    width: 1130px;
-    min-height: calc(100vh - 714px);
-    margin-right: auto;
-    margin-left: auto;
-    padding: 20px 30px;
+.close span:first-child {
+    width: 100%;
+    height: 8px;
+    margin-top: -4px;
+    transform: translateY(50px) rotate(45deg); /* 50px와 50%는 다르다 */
 }
 
-#contents #main.main {
-    float: left;
+.close span:last-child {
+    width: 8px; /* close의 w,h 상속 받음 */
+    height: 100%;
+    margin-left: -4px;
+    transform: translateX(50px) rotate(45deg);
 }
 
-#contents #aside.aside {
-    float: right;
+.close-2 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    background-color: #10ce72;
 }
 
-#contents::after {
-    content: '';
+.close-2 span {
     display: block;
-    clear:both;
-    width: 0;
-    height: 0;
+    position: absolute;
+    background-color: black;
+    transition: transform 120ms ease-out;
 }
 
-#footer {
-    background-color: #fafbfc;
-    border-top: 1px solid #e4e8eb;
+.close-2 span:first-child {
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    transform: translateY(-50%);
 }
 
-#footer .gf-content {
-    width: 1130px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 20px 30px;
+.close-2 span:last-child {
+    top: 0; /* top과 bottom으로 w, h 값 안줘도됌 */
+    bottom: 0;
+    left: 50%;
+    width: 8px; /* close의 w,h 상속 받음 */
+    /*height: 100%;*/
+    transform: translateX(-50%);
 }
+
+.close-2:hover span:first-child {
+    transform: translateY(-50%) rotate(-45deg);
+    transition: 200ms ease-in-out;
+}
+
+.close-2:hover span:last-child {
+    transform: translateX(-50%) rotate(-45deg);
+    transition: 200ms ease-in-out;
+}
+
