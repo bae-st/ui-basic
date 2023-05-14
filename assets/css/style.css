@@ -3,112 +3,90 @@
     padding: 0;
 }
 
-.contents {
-    width: 100vw;
+.container {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    flex-wrap: wrap; /* default: no-wrap */
+    flex-direction: row; /* 뒤에서부터 채워짐 */
+    /*flex-direction: column-reverse;*/
+    background-color: #10ce72;
+    /*justify-content: center; !* 아이템 개수에 맞춰서 가운데 정렬 *!*/
+    /*justify-content: flex-end;*/
+    /*justify-content: flex-start;*/
+    /*justify-content: space-around;*/
+    /*justify-content: space-between;*/
+    justify-content: space-evenly;
+
+    /*align-items: flex-start;*/
+    /*align-items: flex-end;*/
+    align-items: stretch;
+
+    gap: 20px;
+}
+
+.item {
+    width: 150px;
     height: 100vh;
-}
-
-.box {
-    width: 300px;
-    height: 300px;
-    background-color: yellowgreen;
+    /*height: 150px;*/
+    background-color: black;
+    color: white;
+    font-size: 30px;
     text-align: center;
-    font-size: 80px;
-    color: pink;
-    font-size: 80px;
-    font-weight: bold;
-    line-height: 300px;
-
-    /*transform: perspective(1000px);*/
-    /* transform */
-    transform: translateX(50px) translateY(100px) translateZ(100px);
-
-    transition: transform 300ms ease-in-out;
+    font-weight: 00;
+    line-height: 150px;
+    /*flex-shrink: 1;*/
+    flex: 1;
+    /*order: 1;*/
 }
 
-.box.box-1 {
-    transform: scale(1.0) rotate(0deg);
+#item-6 {
+    align-self: stretch; /* item의 높이값을 없앴을 때 해당 아이템들을 늘림 */
+
 }
 
-.box-wrap {
-    width: 300px;
-    height: 300px;
+#item-8 {
+    flex-basis: 400px;
+    /*flex: 2;*/
+    /*flex-shrink: 3;*/
+    background-color: red;
+
+    order: 0;
+    align-self: center;
 }
 
-.box-wrap:hover .box.box-1 {
-    transform: scale(0.3) rotate(45deg);
-    /*transform-origin: 100% 0;*/
-}
-
-.close {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 50px;
-    margin-top: 200px;
-    background-color: #10ce72;
-}
-
-.close span {
-    display: block;
-    position: absolute;
-    background-color: black;
-}
-
-.close span:first-child {
+.container-2 {
+    display: flex;
     width: 100%;
-    height: 8px;
-    margin-top: -4px;
-    transform: translateY(50px) rotate(45deg); /* 50px와 50%는 다르다 */
-}
-
-.close span:last-child {
-    width: 8px; /* close의 w,h 상속 받음 */
-    height: 100%;
-    margin-left: -4px;
-    transform: translateX(50px) rotate(45deg);
-}
-
-.close-2 {
-    position: relative;
-    width: 100px;
     height: 100px;
-    margin: 50px;
-    background-color: #10ce72;
+    background-color: yellowgreen;
 }
 
-.close-2 span {
-    display: block;
-    position: absolute;
-    background-color: black;
-    transition: transform 120ms ease-out;
+.container-2 div {
+    height: 100px;
+    width: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
 }
 
-.close-2 span:first-child {
-    top: 50%;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    transform: translateY(-50%);
-}
+/*.item-1 + .item-2 {*/
+/*    margin-left: 50px;*/
+/*}*/
 
-.close-2 span:last-child {
-    top: 0; /* top과 bottom으로 w, h 값 안줘도됌 */
-    bottom: 0;
-    left: 50%;
-    width: 8px; /* close의 w,h 상속 받음 */
-    /*height: 100%;*/
-    transform: translateX(-50%);
-}
+/*.item-1 {*/
+/*    margin-right: auto;*/
+/*}*/
 
-.close-2:hover span:first-child {
-    transform: translateY(-50%) rotate(-45deg);
-    transition: 200ms ease-in-out;
-}
+/*.item-3 {*/
+/*    margin-left: auto;*/
+/*}*/
 
-.close-2:hover span:last-child {
-    transform: translateX(-50%) rotate(-45deg);
-    transition: 200ms ease-in-out;
+.item-2 {
+    margin-right: auto;
+    margin-left: auto;
 }
-
