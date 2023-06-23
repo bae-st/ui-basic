@@ -12,20 +12,20 @@
     font-size: 16px;
     font-weight: 700; /* bold */
     line-height: 24px;
-    /*font-weight: normal; !* 보통 *!*/
-    /*font-weight: bold;*/
-    /*font-weight: lighter;*/
-    /*font-weight: 500; !* semi bold *!*/
-    /*font-weight: 400; !* regular *!*/
-    /*font-weight: 300; !* light *!*/
-    /*font-weight: 200; !* ultra light *!*/
-    /*font-weight: 100; !* thin *!*/
+    /*fonts-weight: normal; !* 보통 *!*/
+    /*fonts-weight: bold;*/
+    /*fonts-weight: lighter;*/
+    /*fonts-weight: 500; !* semi bold *!*/
+    /*fonts-weight: 400; !* regular *!*/
+    /*fonts-weight: 300; !* light *!*/
+    /*fonts-weight: 200; !* ultra light *!*/
+    /*fonts-weight: 100; !* thin *!*/
 
-    /*font-style: oblique;*/
-    /*font-style: normal;*/
+    /*fonts-style: oblique;*/
+    /*fonts-style: normal;*/
 
-    /*font-family: 'Noto Sans KR', 'Roboto', 'Noto Sans', -apple-system, 'Helvetica Neue', 'Arial', sans-serif;*/
-    /*font-family: 'SF Pro KR', 'SF Pro Display', 'SF Pro Icons', 'Apple Gothic', 'HY Gulim', 'MalgunGothic', 'HY Dotum', 'Lexi Gulim', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif*/
+    /*fonts-family: 'Noto Sans KR', 'Roboto', 'Noto Sans', -apple-system, 'Helvetica Neue', 'Arial', sans-serif;*/
+    /*fonts-family: 'SF Pro KR', 'SF Pro Display', 'SF Pro Icons', 'Apple Gothic', 'HY Gulim', 'MalgunGothic', 'HY Dotum', 'Lexi Gulim', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif*/
 }
 
 .box-1 {
@@ -33,11 +33,11 @@
 }
 
 /*.box-2 {*/
-/*    font-family: 'Dosis', 'Josefin Sans', sans-serif;*/
+/*    fonts-family: 'Dosis', 'Josefin Sans', sans-serif;*/
 /*}*/
 
 .box-2 {
-    /*font-family: futura-pt, sans-serif;*/
+    /*fonts-family: futura-pt, sans-serif;*/
     font-family: essonnes-text, serif;
     font-weight: 400;
     font-style: italic;
