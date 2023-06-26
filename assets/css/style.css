@@ -580,13 +580,13 @@ section.main_section .unit_copy_wrapper {
     width: 100%;
     padding-top: 55px;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
 }
 
 section.main_section #hero--vision_pro.section_content .unit_copy_wrapper {
     padding-top: initial;
-    padding-bottom: 55px;
+    padding-top: 500px; /* 임의로 수정함 */
 }
 
 section.main_section #hero--iphone_14_pro.section_content .unit_copy_wrapper {
@@ -627,6 +627,7 @@ section.main_section .unit_copy_wrapper p.callout {
     font-weight: 400;
     line-height: 25px;
 }
+
 section.main_section .unit_copy_wrapper .cta_links {
     display: flex;
     position: relative;
@@ -684,6 +685,37 @@ section.main_section .unit_image_wrapper .unit_image {
     transform: translateX(-50%);
 }
 
+/*#promotion_section {*/
+/*    display: grid;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: #10ce72;*/
+/*}*/
+
+#promotion_section .promotion_contents {
+    display: grid;
+    width: 100%;
+    height: 300px;
+    /*background-color: yellow;*/
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+}
+
+#promotion_section .promotion_contents .layout {
+    /*background-color: yellow;*/
+    height: 490px;
+}
+
+/*section.main_section #promotion_section .promotion_contents {*/
+/*    !*display: flex;*!*/
+/*    grid-template-columns: repeat(2, 1fr);*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    box-sizing: border-box;*/
+/*    position: relative;*/
+/*    background-color: #54b8fb;*/
+/*}*/
+
 #hero--macbook_air_15 .unit_image {
     width: 3008px;
     height: 736px;
@@ -709,4 +741,154 @@ section.main_section .unit_image_wrapper .unit_image {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(/assets/img/hero_03_iphone14pro.jpg);
+}
+
+#hero--iphone_14_pro .unit_image {
+    width: 3008px;
+    height: 736px;
+    background-size: 3008px 736px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/img/hero_03_iphone14pro.jpg);
+}
+
+section#promotion_section.main_section {
+    --item-height: 580px;
+    padding: 12px;
+}
+
+section#promotion_section.main_section .section_list_wrapper {
+    margin: -6px;
+}
+
+section#promotion_section.main_section .section_list_wrapper .section_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section#promotion_section.main_section .section_list_wrapper .section_list .section_item {
+    width: 50%;
+    padding: 6px;
+}
+
+section#promotion_section.main_section .section_list_wrapper .section_list .section_item .unit_container {
+    /*background-color: yellowgreen;*/
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: var(--item-height);
+}
+
+section.main_section #hero--vision_pro.section_content .unit_copy_wrapper h2.headline.vision_pro_logo {
+    width: 235px;
+    height: 48px;
+    background-size: 235px 48px;
+    background-image: url("/assets/img/hero_logo_apple_vision_pro_2x.png");
+}
+
+/* 프로모션 부분 */
+
+section#promotion_section.main_section .unit_copy_wrapper {
+    padding-top: 53px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline {
+    font-size: 46px;
+    line-height: 44px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline + h3.subhead {
+    margin-top: 4px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h3.subhead {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h3.subhead + p.callout {
+    margin-top: 12px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper p.callout {
+    margin-top: 12px;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links {
+    margin-top: 0.7em;
+    gap: 28px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links a.cta_link {
+    font-size: 17px;
+    line-height: 20px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links a.cta_link:hover::before {
+    width: calc(100% - 16px);
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links a.cta_link::before {
+    bottom: -1px;
+    /*border-top: 2px solid #0066cc;*/
+    border-top-width: 1px;
+}
+
+
+#promo_iphone14 .unit_image {
+    width: 1262px;
+    height: 580px;
+    background-size: 1262px 580px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/img/promo_01_iphone14_yellow_2x.jpg);
+}
+
+#promo_vision_pro .unit_image {
+    width: 1262px;
+    height: 580px;
+    background-size: 1262px 580px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/img/promo_02_apple_vision_pro_2x.jpg);
+}
+
+#promo_watch .unit_image {
+    width: 1504px;
+    height: 490px;
+    background-size: 1504px 490px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/img/promo_03_apple_watch_series_8_2x.jpg);
+}
+
+#promo_ipad_pro .unit_image {
+    width: 1504px;
+    height: 490px;
+    background-size: 1504px 490px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/img/promo_04_ipadpro_refresh_2x.jpg);
+}
+
+#promo_trade_in .unit_image {
+    width: 1504px;
+    height: 490px;
+    background-size: 1504px 490px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/img/promo_05_iphone_tradein_2x.jpg);
+}
+
+#promo_cards .unit_image {
+    width: 1504px;
+    height: 490px;
+    background-size: 1504px 490px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/img/promo_06_apple_card_2x.jpg);
 }
